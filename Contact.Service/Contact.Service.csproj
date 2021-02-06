@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contact.Messages\Contact.Messages.csproj" />
+    <ProjectReference Include="..\CrossCutting\DomainBase\Domain\DomainBase.csproj" />
+    <ProjectReference Include="..\NServiceBus\CrossCutting.NServiceBus.csproj" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+	  <PackageReference Include="NServiceBus" Version="7.1.9" />
+	  <PackageReference Include="NServiceBus.Serilog" Version="6.3.2" />
+	  <PackageReference Include="Serilog.Settings.Configuration" Version="3.0.1" />
+	  <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.2" />
+	  <PackageReference Include="Serilog.Enrichers.Thread" Version="3.0.0" />
+	  <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+	  <PackageReference Include="Serilog.Sinks.ContextRollingFile" Version="0.1.1" />
+	  <PackageReference Include="Serilog.Sinks.Literate" Version="3.0.0" />
+	  <PackageReference Include="StructureMap" Version="4.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
