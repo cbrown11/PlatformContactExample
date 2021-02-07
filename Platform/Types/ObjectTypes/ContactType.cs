@@ -15,6 +15,7 @@ namespace Platform.GraphQL.Types.ObjectTypes
             Field(x => x.UserId);
             Field(x => x.FirstName);
             Field(x => x.LastName);
+            Field(typeof(StringGraphType), "Name", description: "Full name of the contact", resolve: context => $"{context.Source.FirstName} {context.Source.LastName}");
             Field(x => x.EmailAddress);
             Field(typeof(DateGraphType), "DateOfBirth", resolve:context=> context.Source.DateOfBirth.Date);
             Field(x => x.Address, type: typeof(AddressType));
