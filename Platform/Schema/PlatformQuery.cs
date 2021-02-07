@@ -1,9 +1,7 @@
-﻿using System;
-using Contact.Projection.Services;
+﻿
+using CrossCutting.Country;
 using GraphQL;
 using GraphQL.Types;
-using Platform.GraphQL.Helpers;
-using Platform.GraphQL.Services;
 using Platform.GraphQL.Types.ObjectTypes;
 
 namespace Platform.GraphQL

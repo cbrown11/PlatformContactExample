@@ -1,6 +1,7 @@
-﻿using GraphQL.Types;
-using System.Globalization;
-using Platform.GraphQL.Helpers;
+﻿using CrossCutting.Country;
+using GraphQL.Types;
+
+
 namespace Platform.GraphQL.EnumTypes
 {
     public class CountryEnum: EnumerationGraphType

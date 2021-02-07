@@ -10,6 +10,7 @@ namespace Platform.GraphQL.Types.ObjectTypes
         public ContactType()
         {
             Name = "Contact";
+            Description = "A person contact details";
             Field(x => x.ContactId);
             Field(x => x.UserId);
             Field(x => x.FirstName);

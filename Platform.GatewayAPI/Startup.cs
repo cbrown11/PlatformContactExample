@@ -75,6 +75,9 @@ namespace Platform.GatewayAPI
 
             // use graphql-playground at default url /ui/playground
             app.UseGraphQLPlayground();
+
+            // use graphql-voyager at default url /ui/voyager
+            app.UseGraphQLVoyager();
         }
     }
 }

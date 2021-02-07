@@ -1,11 +1,11 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace Platform.GraphQL.Helpers
+namespace CrossCutting.Country
 {
     public static class ISO3166
     {
-        
+
         /// <summary>
         /// Obtain ISO3166-1 Country based on its alpha3 code.
         /// </summary>
@@ -286,20 +286,20 @@ namespace Platform.GraphQL.Helpers
     {
         public ISO3166Country(string name, string alpha2, string alpha3, int numericCode)
         {
-            this.Name = name;
-            this.Alpha2 = alpha2;
-            this.Alpha3 = alpha3;
-            this.NumericCode = numericCode;
+            Name = name;
+            Alpha2 = alpha2;
+            Alpha3 = alpha3;
+            NumericCode = numericCode;
         }
 
         public ISO3166Country() { }
 
-        public string Name { get;  set; }
+        public string Name { get; set; }
 
-        public string Alpha2 { get;  set; }
+        public string Alpha2 { get; set; }
 
-        public string Alpha3 { get;  set; }
+        public string Alpha3 { get; set; }
 
-        public int NumericCode { get;  set; }
+        public int NumericCode { get; set; }
     }
 }

@@ -8,4 +8,8 @@
     <Folder Include="Persistence\Contexts\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Country\CrossCutting.Country.csproj" />
+  </ItemGroup>
+
 </Project>
