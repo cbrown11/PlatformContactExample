@@ -54,6 +54,16 @@ namespace Platform.GatewayAPI
             services.AddLogging(builder => builder.AddConsole());
             services.AddHttpContextAccessor();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("DefaultPolicy", builder =>
+                {
+                    builder.AllowAnyHeader()
+                           .WithMethods("GET", "POST")
+                           .AllowAnyOrigin();
+                });
+            });
+
             services.AddGraphQL(options =>
             {
                 options.EnableMetrics = true;
@@ -69,6 +79,11 @@ namespace Platform.GatewayAPI
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
+
+            app.UseCors(x => x
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
 
             // add http for Schema at default url /graphql
             app.UseGraphQL<ISchema>();

@@ -18,7 +18,7 @@ namespace Platform.GraphQL.InputTypes
             Field(x => x.EmailAddress)
                 .Description("Provide a valid email address for the contact")
                 .Configure(type => type.Metadata.Add(nameof(EmailAddressValidationRule), null));
-            Field(x => x.DateOfBirth, type: typeof(DateGraphType))
+            Field(x => x.DateOfBirth, type: typeof(NonNullGraphType<DateGraphType>))
                  .Description("Provide an date of birth for the contact");
             Field(x => x.Address, type: typeof(AddressInputType))
              .Description("Provide an address for the contact");

@@ -16,7 +16,7 @@ namespace Platform.GraphQL.Types.ObjectTypes
             Field(x => x.FirstName);
             Field(x => x.LastName);
             Field(x => x.EmailAddress);
-            Field(x => x.DateOfBirth, type: typeof(DateGraphType));
+            Field(typeof(DateGraphType), "DateOfBirth", resolve:context=> context.Source.DateOfBirth.Date);
             Field(x => x.Address, type: typeof(AddressType));
 
         }
