@@ -41,7 +41,7 @@ namespace Contact.Projection.API
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+         
             app.UseHttpsRedirection();
             app.UseCustomSwagger();
             app.UseRouting();

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+		<PackageReference Include="Machine.Specifications.Runner.VisualStudio" Version="2.7.0" />
+		<PackageReference Include="Machine.Specifications.Should" Version="0.11.0" />
+		<PackageReference Include="AutoFixture.AutoMoq" Version="4.5.0" />
+		<PackageReference Include="NServiceBus.Testing" Version="7.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Contact.Domain\Contact.Domain.csproj" />
+		<ProjectReference Include="..\Contact.Projection.API\Contact.Projection.API.csproj" />
+		<ProjectReference Include="..\Contact.Projection\Contact.Projection.csproj" />
+		<ProjectReference Include="..\CrossCutting\DomainBase\Domain\DomainBase.csproj" />
+	</ItemGroup>
+
+
+</Project>

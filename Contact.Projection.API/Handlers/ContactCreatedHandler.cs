@@ -21,8 +21,6 @@ namespace Contact.Projection.API.Handlers
         public async Task Handle(ContactCreated message, IMessageHandlerContext context)
         {
             var contact = _mapper.Map<Models.Contact>(message);
-
-
             await _contactService.SaveAsync(contact);
         }
     }

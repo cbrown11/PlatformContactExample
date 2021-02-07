@@ -34,8 +34,6 @@ namespace Contact.Projection.API
                     serilogTracing.EnableMessageTracing();
                     endpointConfiguration.ApplyCustomConventions();
                     var transport = endpointConfiguration.UseTransport<LearningTransport>();
-                //    transport.Routing().RouteToEndpoint(typeof(CreateContact), endpoint);
-
                     return endpointConfiguration;
             })
             .ConfigureWebHostDefaults(webBuilder =>
