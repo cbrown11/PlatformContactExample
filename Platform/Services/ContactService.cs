@@ -1,22 +1,27 @@
-﻿using Contact.Projection.Services;
-using System;
+﻿
+using Platform.GraphQL.Repositories;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Platform.GraphQL.Services
 {
     public class ContactService : IContactService
     {
- 
-        Task<Contact.Projection.Models.Contact> IContactService.GetByIdAsync(string id)
+        private readonly IContactRepository _contactRepository;
+
+        public ContactService(IContactRepository contactRepository)
         {
-            throw new NotImplementedException();
+            this._contactRepository = contactRepository;
+        }
+
+        Task<Contact.Projection.Models.Contact> IContactService.GetByIdAsync(string contactId)
+        {
+            return _contactRepository.FindByIdAsync(contactId);
         }
 
         Task<IEnumerable<Contact.Projection.Models.Contact>> IContactService.ListAsync()
         {
-            throw new NotImplementedException();
+            return _contactRepository.ListAsync();
         }
     }
 }

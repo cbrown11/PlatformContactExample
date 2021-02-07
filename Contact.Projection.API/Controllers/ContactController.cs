@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using Contact.Projection.Services;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,18 +14,31 @@ namespace Contact.Projection.API.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
+
+        private readonly IContactService _contactService;
+ 
+
+        public ContactController(IContactService contactService)
+        {
+            _contactService = contactService;
+        }
+
         // GET: api/<ContactController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        [ProducesResponseType(typeof(IEnumerable<Models.Contact>), 200)]
+        public async Task<IEnumerable<Models.Contact>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var contact = await _contactService.ListAsync();
+            return contact;
         }
 
         // GET api/<ContactController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        [ProducesResponseType(typeof(IEnumerable<Models.Contact>), 200)]
+        public async Task<Models.Contact> Get(string id)
         {
-            return "value";
+            var contacts = await _contactService.GetByIdAsync(id);
+            return contacts;
         }
     }
 }

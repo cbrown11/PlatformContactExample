@@ -1,20 +1,37 @@
-﻿using System;
+﻿using Contact.Projection.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Contact.Projection.Services
 {
-    public class ContactService: IContactService
+    public class ContactService : IContactService
     {
-        public Task<Models.Contact> GetByIdAsync(string id)
+        private readonly IContactRepository _contactRepository;
+
+        public ContactService(IContactRepository contactRepository)
         {
-            throw new NotImplementedException();
+            this._contactRepository = contactRepository;
+        }
+
+
+        public async Task<Models.Contact> GetByIdAsync(string id)
+        {
+            return await _contactRepository.FindByIdAsync(id);
         }
 
         public async Task<IEnumerable<Models.Contact>> ListAsync()
         {
-            throw new NotImplementedException();
+            return await _contactRepository.ListAsync();
+        }
+
+        public async Task SaveAsync(Models.Contact contact)
+        {
+            if(_contactRepository.FindByIdAsync(contact.ContactId).Result == null)
+                    _contactRepository.AddAsync(contact);
+            else
+                _contactRepository.Update(contact);
         }
     }
 }

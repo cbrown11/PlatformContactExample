@@ -3,13 +3,14 @@ using Contact.Projection.Services;
 using GraphQL;
 using GraphQL.Types;
 using Platform.GraphQL.Helpers;
+using Platform.GraphQL.Services;
 using Platform.GraphQL.Types;
 
 namespace Platform.GraphQL
 {
     public class PlatformQuery : ObjectGraphType<object>
     {
-        public PlatformQuery(IContactService contact)
+        public PlatformQuery(Services.IContactService contact)
         {
             Name = "Query";
 
@@ -22,7 +23,7 @@ namespace Platform.GraphQL
                     resolve: context => contact.GetByIdAsync(context.GetArgument<string>("id"))
                 );
 
-            Field<ContactType>(
+            Field<ListGraphType<ContactType>>(
                     "contacts",
                     resolve: context => contact.ListAsync()
                 );

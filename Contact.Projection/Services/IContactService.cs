@@ -6,6 +6,8 @@ namespace Contact.Projection.Services
     public interface IContactService
     {
         Task<IEnumerable<Models.Contact>> ListAsync();
-        Task<Models.Contact> GetByIdAsync(string v);
+        Task<Models.Contact> GetByIdAsync(string id);
+
+        Task SaveAsync(Models.Contact contact);
     }
 }

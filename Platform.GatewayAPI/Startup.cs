@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using Platform.GraphQL;
 using Platform.GraphQL.EnumTypes;
 using Platform.GraphQL.InputTypes;
+using Platform.GraphQL.Persistence.Repositories;
+using Platform.GraphQL.Repositories;
 using Platform.GraphQL.Services;
 using Platform.GraphQL.Types;
 using Platform.GraphQL.ValidationRules;
@@ -23,7 +25,8 @@ namespace Platform.GatewayAPI
         public void ConfigureServices(IServiceCollection services)
         {
             // Services
-            services.AddSingleton< Contact.Projection.Services.IContactService,  ContactService >();
+            services.AddSingleton<IContactService,  ContactService>();
+            services.AddSingleton<IContactRepository>(new ContactRepository("http://localhost:58118/api/"));
 
             // Schema
             services.AddSingleton<ISchema, PlatformSchema>();
@@ -41,7 +44,7 @@ namespace Platform.GatewayAPI
 
             // Validation Rule
             services.AddSingleton<IEnumerable<IValidationRule>>(new IValidationRule[] {
-             //   new EmailAddressValidationRule(),
+                new EmailAddressValidationRule(),
                 new NonEmptyStringAndWhiteSpaceValidationRule(),
                 new NonEmptyStringValidationRule(),
             }); 

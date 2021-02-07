@@ -22,6 +22,10 @@ namespace Platform.GraphQL
                 resolve: context =>
                 {
                     var createContact = context.GetArgument<CreateContact>("createContact");
+                    createContact.AuditInfo = new DomainBase.AuditInfo
+                    {
+                        By = "anonymous"
+                    };
                     messageSession.Send(createContact).Wait();
                     return createContact.UserId;
 
