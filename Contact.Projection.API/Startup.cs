@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AutoMapper;
+using Contact.Projection.API.Extensions;
 
 namespace Contact.Projection.API
 {
@@ -22,6 +23,7 @@ namespace Contact.Projection.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCustomSwagger();
             services.AddSingleton<IContactService, ContactService>();
             services.AddSingleton<IContactRepository, ContactRepository>();
 
@@ -34,14 +36,16 @@ namespace Contact.Projection.API
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseHttpsRedirection();
+            app.UseCustomSwagger();
             app.UseRouting();
-           app.UseAuthorization();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

@@ -4,7 +4,7 @@
     "Contact.Projection.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/contact",
+      "launchUrl": "swagger",
       "applicationUrl": "http://localhost:58118/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

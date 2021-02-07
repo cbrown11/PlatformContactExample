@@ -4,6 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>bin\Debug\netcoreapp3.1\Contact.Projection.API.xml</DocumentationFile>
+		<OutputPath>bin\Debug\netcoreapp3.1\</OutputPath>
+		<NoWarn>1701;1702;1591;</NoWarn>
+	</PropertyGroup>
   <ItemGroup>
 	  <PackageReference Include="AutoMapper" Version="10.1.1" />
 	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
@@ -16,6 +21,7 @@
 	  <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
 	  <PackageReference Include="Serilog.Sinks.ContextRollingFile" Version="0.1.1" />
 	  <PackageReference Include="Serilog.Sinks.Literate" Version="3.0.0" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc5" />
   </ItemGroup>
 
   <ItemGroup>
