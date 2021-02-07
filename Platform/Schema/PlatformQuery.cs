@@ -4,7 +4,7 @@ using GraphQL;
 using GraphQL.Types;
 using Platform.GraphQL.Helpers;
 using Platform.GraphQL.Services;
-using Platform.GraphQL.Types;
+using Platform.GraphQL.Types.ObjectTypes;
 
 namespace Platform.GraphQL
 {

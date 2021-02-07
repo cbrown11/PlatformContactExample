@@ -13,7 +13,7 @@ using Platform.GraphQL.InputTypes;
 using Platform.GraphQL.Persistence.Repositories;
 using Platform.GraphQL.Repositories;
 using Platform.GraphQL.Services;
-using Platform.GraphQL.Types;
+using Platform.GraphQL.Types.ObjectTypes;
 using Platform.GraphQL.ValidationRules;
 using System.Collections.Generic;
 
@@ -41,6 +41,8 @@ namespace Platform.GatewayAPI
             // Query
             services.AddSingleton<ContactType>();
             services.AddSingleton<CountryType>();
+            services.AddSingleton<AddressType>();
+            
 
             // Validation Rule
             services.AddSingleton<IEnumerable<IValidationRule>>(new IValidationRule[] {

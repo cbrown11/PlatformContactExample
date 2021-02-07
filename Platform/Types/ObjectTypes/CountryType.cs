@@ -2,7 +2,7 @@
 using GraphQL.Types;
 using Platform.GraphQL.Helpers;
 
-namespace Platform.GraphQL.Types
+namespace Platform.GraphQL.Types.ObjectTypes
 {
     public class CountryType : ObjectGraphType<ISO3166Country>
     {
