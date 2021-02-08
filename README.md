@@ -42,7 +42,7 @@ To create a contact you will need to run the following mutation, which the creat
 ## Create a Contact Mutation
 
 To create  a Contact, then send a commnand message to the Contact.Service via this mutation: 
-```javascript 
+``` 
 mutation {
   createContact(
     createContact: {
@@ -65,15 +65,15 @@ mutation {
 
 Some useful qraphql queries but can be view via the UI. Though I havent setup pub/sub which graphQL also has.
 
-
+``` 
 query{
   countries{
     alpha3
     name
   }
 }
-
-
+``` 
+``` 
 query{
   contacts{ 
     id: contactId
@@ -94,8 +94,8 @@ query{
     }
   }
 }
-
-
+``` 
+``` 
 query {
   contact(id: "5bfbf9c1-11df-46ed-b09c-ad24615206a3") {
     userId
@@ -105,7 +105,7 @@ query {
     dateOfBirth
   }
 }
-
+``` 
 
 # EventStore In Memory Verions (Greg Young)
 
