@@ -206,4 +206,4 @@ Just need to change IOC container to use it for the Contact.Service.
 ## UI Components
 ![Contact.Projection.API](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/swagger.png)
 ![UI Contacts](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/UI_contacts.png)
-![find Contact](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/UI_findContac.png)
+![find Contact](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/UI_findContact.png)
