@@ -43,11 +43,11 @@ Navigate to view sawagger of the API `http://localhost:58118/swagger/index.html`
 - This could follow the contact service. Whether they follow the CQRS, DDD or just a simple CRUD REST service.
 - Will have their own end point but can be pulled together by the Platform.GatewayAPI and its GraphQL schema.
 
-### Country Service 
+### Country Service (instead of Package Li)
 
-I have made country a static class which the Platform Schema uses.
+I made a country package library which the Platform Schema references. However this could be a simple API in its own right, especially if the data would change and not be statuc 
 
-However this could be a simple API in its own right. And easily changed in the Platform.GatewayAPI, without effecting anything up stream or the other services.
+This can be changed in the Platform.GatewayAPI, without effecting anything up stream or the other services.
 
 For example the rest service end point could be a simple Rest API.
 
