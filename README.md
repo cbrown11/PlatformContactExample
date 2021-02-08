@@ -35,11 +35,11 @@ Main api is `http://localhost:3000/graphql`. Ive attached playground and voyager
 
 Navigate to view sawagger of the API `http://localhost:58118/swagger/index.html`
 
-## Playground Examples
+# Playground Examples
 
 To create a contact you will need to run the following mutation, which the create component would run in the UI. This is where the data validation is mainly done.
 
-### Create a Contact Mutation
+## Create a Contact Mutation
 
 To create  a Contact, then send a commnand message to the Contact.Service via this mutation: 
  
@@ -61,7 +61,7 @@ mutation {
   )
 }
 
-### Query Platform
+## Query Platform
 
 Some useful qraphql queries but can be view via the UI. Though I havent setup pub/sub which graphQL also has.
 
@@ -107,7 +107,7 @@ query {
 }
 
 
-## EventStore In Memory Verions (Greg Young)
+# EventStore In Memory Verions (Greg Young)
 
 I've used a in memory database both for my eventstore, projection. The bus is also using a development version and stored locally to disk - ..\Platform\.learningtransport.
 
