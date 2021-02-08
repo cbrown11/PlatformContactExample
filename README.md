@@ -18,7 +18,6 @@ There are three services to run and the UI. All services are written in dotnet  
 
 So if you haven't got Visual studio can run 'dotnet run' in the project or 'dotnet <dll>' on a compiled version ('dotnet build').
   
-
 ## PlatformUI 
 The Code for the UI is in a different Git Repository `https://github.com/cbrown11/PlatformExampleUI`
 
@@ -35,7 +34,6 @@ TESTS: There would be Specflow tests, testing end to end. Sorry I didnt want to 
 
 ``` 
 cd .\Platform.GatewayAPI\bin\Debug\netcoreapp3.1
-dotnet build
 dotnet Platform.GatewayAPI.dll
 ``` 
 ## Contact.Service
