@@ -16,7 +16,7 @@ Documentation on GraphQL: https://graphql.org/learn/
 
 There are three services to run and the UI. All services are written in dotnet  version .net core 3.1. 
 
-So if you haven't got Visual studio can run 'dotnet run' in the project or 'dotnet <dll>' on a compiled version.
+So if you haven't got Visual studio can run 'dotnet run' in the project or 'dotnet <dll>' on a compiled version ('dotnet build').
   
 
 ## PlatformUI 
@@ -33,10 +33,21 @@ Main api is `http://localhost:3000/graphql`. Ive attached playground and voyager
 
 TESTS: There would be Specflow tests, testing end to end. Sorry I didnt want to expose the package library I've written to convert specflow into a graphQL schema (for Free). 
 
+``` 
+cd .\Platform.GatewayAPI\bin\Debug\netcoreapp3.1
+dotnet build
+dotnet Platform.GatewayAPI.dll
+``` 
 ## Contact.Service
 
 - Endpoint to this service is by a command message. Though could expose the Command as an API call.
 - Events will be written to an eventstore and the domain repository will send this events on to the Bus.
+
+``` 
+cd .\Contact.Service\bin\Debug\netcoreapp3.1
+dotnet build
+dotnet Contact.Service.dll
+``` 
 
 ## Contact.Projection.API
 
@@ -44,6 +55,11 @@ TESTS: There would be Specflow tests, testing end to end. Sorry I didnt want to 
 - Using NserviceBus learning Transport so will automatically setup the pub/sub. But other transporters will needs to be configured. Having written in the pass so can be done via the config (SQL, RabbitMQ)
 
 Navigate to view sawagger of the API `http://localhost:58118/swagger/index.html`
+
+``` 
+cd .\Contact.Projection.API\bin\Debug\netcoreapp3.1
+dotnet Contact.Projection.API.dll
+```
 
 ## Other Services (ie Shop, Company)
 
