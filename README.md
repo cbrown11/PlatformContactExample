@@ -16,6 +16,10 @@ Documentation on GraphQL: https://graphql.org/learn/
 
 There are three services to run and the UI. 
 
+All services are written in dotnet core. So if you haven't got Visual studio can run 'dotnet run' in the project or 'dotnet <dll>' on a compiled version.
+  
+  
+
 ## PlatformUI 
 The Code for the UI is in a different Git Repository `https://github.com/cbrown11/PlatformExampleUI`
 
