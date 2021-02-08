@@ -56,6 +56,23 @@ For example the rest service end point could be a simple Rest API.
 - http://localhost:{port}/country
 - http://localhost:{port}/country/{alphaCode}
 
+## Contact Linking to Other Services Question
+
+### Simple Link - Latest Version all times
+
+If its simple and all they care about is having the latest version then then linking the contactId is sufficient. As the Platform GraphQL can use that id in its resolve to retrieve the contact details.
+
+Same way the Address Type works out its Country Type data.
+
+### Complex Link
+
+If another domain area needs a more complex version, for example need to have the latest contact (ie submitting legal document) up to a given time then this can be different. Obviously we stored the events so we can still obtain that information from the contact service. But not sure this is the best approach. What if we want to replace the contact service with another service? 
+
+This seperate domain should have its own contact model (or use a shared kernel value object if using DDD). And therefore have its own persitence of it.
+1. The data can either be passed or capture from the contact domain service, either from domain peristence or the read model. Depends on the latency but I'm sure the read model would be sufficient in this scenario and most cases.
+2. The domain would then keeps its own contact details up to date by subscribing to the contact domain events. (same was as the contact readmodel)
+3. In regards to the Platform Schema. Obviously it could have its own model type but I would think contact model type would be the same in most cases. Therefore for that new domain area model type in the GraphQL schema, the Contact Type resolver would only need to be different. And point to the relative new domain source. 
+
 # Playground Examples
 
 To create a contact you will need to run the following mutation, which the create component would run in the UI. This is where the data validation is mainly done, though the command class has its own validation and checks.
