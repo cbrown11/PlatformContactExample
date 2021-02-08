@@ -23,7 +23,7 @@ Navigate to `http://localhost:4200/`
 
 ## Platform.GatewayAPI
 
-Main api is `http://localhost:3000/graphql`. Ive attached playground and voyager to the api so can easily view and explorer 
+Main api is `http://localhost:3000/graphql`. Ive attached playground and voyager to the api so can easily send mutations, query and explorer the schema and its data. 
 
 - For Playground Ground Navigate to `http://localhost:3000/ui/playground`
 - For Voyager  Navigate to `http://localhost:3000/ui/voyager`
@@ -59,6 +59,9 @@ For example the rest service end point could be a simple Rest API.
 # Playground Examples
 
 To create a contact you will need to run the following mutation, which the create component would run in the UI. This is where the data validation is mainly done.
+
+- Along with the standard Graphql validation. There are three custom types of validation I created empty string, empty string without white space (userId) and email validation. Validation will be reported in the output response. 
+- If the data is an enum then will let you choose an option (ie countryIsoAlpha3)
 
 ## Create a Contact Mutation
 
