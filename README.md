@@ -72,8 +72,8 @@ This can be changed in the Platform.GatewayAPI, without effecting anything up st
 
 For example the rest service end point could be a simple Rest API.
 
-- http://localhost:{port}/country
-- http://localhost:{port}/country/{alphaCode}
+- `http://localhost:{port}/country`
+- `http://localhost:{port}/country/{alphaCode}`
 
 ## Contact Linking to Other Services Question
 
