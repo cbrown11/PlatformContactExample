@@ -1,7 +1,7 @@
 
 # Overview
 
-I kept everything in one solution but obvioulsy this would be seperated. If the Startup is passed over in VS, then runnning the solution will start all the required services and expose their endpoints. 
+I kept everything in one solution but obvioulsy this would be seperated. If the Startup is passed over in Visual Studio, then runnning the solution will start all the required services and expose their endpoints. 
 
 Though please note everything in memory at the moment, so database persitence will be lost if the services are stopped.
 
