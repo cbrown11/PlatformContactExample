@@ -58,7 +58,7 @@ For example the rest service end point could be a simple Rest API.
 
 # Playground Examples
 
-To create a contact you will need to run the following mutation, which the create component would run in the UI. This is where the data validation is mainly done.
+To create a contact you will need to run the following mutation, which the create component would run in the UI. This is where the data validation is mainly done, though the command class has its own validation and checks.
 
 - Along with the standard Graphql validation. There are three custom types of validation I created empty string, empty string without white space (userId) and email validation. Validation will be reported in the output response. 
 - If the data is an enum then will let you choose an option (ie countryIsoAlpha3)
