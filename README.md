@@ -38,6 +38,17 @@ Main api is `http://localhost:3000/graphql`. Ive attached playground and voyager
 
 Navigate to view sawagger of the API `http://localhost:58118/swagger/index.html`
 
+## Other Services (ie Shop, Company)
+
+- This could follow the contact service. Whether they follow the CQRS, DDD or just a simple CRUD REST service.
+- Will have their own end point but can be pulled together by the Platform.GatewayAPI and its GraphQL schema.
+
+### Country Service 
+
+I have made country a static class which the Platform Schema uses.
+
+However this could be a simple API in its own right. And easily changed in the Platform.GatewayAPI, without effecting anything up stream or the other services.
+
 # Playground Examples
 
 To create a contact you will need to run the following mutation, which the create component would run in the UI. This is where the data validation is mainly done.
