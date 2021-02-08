@@ -66,7 +66,7 @@ dotnet Contact.Projection.API.dll
 
 ### Country Service (instead of Package Library)
 
-I made a country package library which the Platform Schema references. However this could be a simple API in its own right, especially if the data would change and not be statuc 
+I made a country package library which the Platform Schema references. However this could be a simple API in its own right, especially if the data would change and not be static 
 
 This can be changed in the Platform.GatewayAPI, without effecting anything up stream or the other services.
 
@@ -79,9 +79,7 @@ For example the rest service end point could be a simple Rest API.
 
 ### Simple Link - Latest Version all times
 
-If its simple and all they care about is having the latest version then then linking the contactId is sufficient. As the Platform GraphQL can use that id in its resolve to retrieve the contact details.
-
-Same way the Address Type works out its Country Type data.
+If its simple and all they care about is having the latest version then then linking the contactId is sufficient. As the Platform GraphQL can use that id in its resolver to retrieve the contact details. Same way the Address Type works out its Country Type data.
 
 ### Complex Link
 
