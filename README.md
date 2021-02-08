@@ -43,7 +43,6 @@ dotnet Platform.GatewayAPI.dll
 
 ``` 
 cd .\Contact.Service\bin\Debug\netcoreapp3.1
-dotnet build
 dotnet Contact.Service.dll
 ``` 
 
