@@ -197,7 +197,7 @@ Just need to change IOC container to use it for the Contact.Service.
 
 
 # Screen Shots
-## Running Services
+## Running Services and UI
 ![Running Services](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/running%20services.png)
 ## GraphQL Playground
 ![Playground](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/Playground.png)
