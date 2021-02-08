@@ -28,6 +28,8 @@ Main api is `http://localhost:3000/graphql`. Ive attached playground and voyager
 - For Playground Ground Navigate to `http://localhost:3000/ui/playground`
 - For Voyager  Navigate to `http://localhost:3000/ui/voyager`
 
+TESTS: There would be Specflow tests, testing end to end. Sorry I didnt want to expose the package library I've written to convert specflow into a graphQL schema (for Free). 
+
 ## Contact.Service
 
 - Endpoint to this service is by a command message. Though could expose the Command as an API call.
