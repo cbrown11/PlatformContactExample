@@ -203,7 +203,8 @@ Just need to change IOC container to use it for the Contact.Service.
 ![Playground](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/Playground.png)
 ## Voyager
 ![Voyager](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/Voyager.png)
-## UI Components
+## Contact.Projection.API (Swagger)
 ![Contact.Projection.API](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/swagger.png)
+## UI Components
 ![UI Contacts](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/UI_contacts.png)
 ![find Contact](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/UI_findContact.png)
