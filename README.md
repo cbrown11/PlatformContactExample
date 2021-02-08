@@ -28,10 +28,13 @@ Main api is `http://localhost:3000/graphql`. Ive attached playground and voyager
 
 ## Contact.Service
 
-- Endpoint is only a Message. Though could expose the Command as an API call.
-- Events will be written to an eventstore and the domain repository will send this events on to the Bus
+- Endpoint to this service is by a command message. Though could expose the Command as an API call.
+- Events will be written to an eventstore and the domain repository will send this events on to the Bus.
 
 ## Contact.Projection.API
+
+- The service will subscribe and listen to the domain events thats its interested in
+- Using NserviceBus learning Transport so will automatically setup the pub/sub. But other transporters will needs to be configured. Having written in the pass so can be done via the config (SQL, RabbitMQ)
 
 Navigate to view sawagger of the API `http://localhost:58118/swagger/index.html`
 
