@@ -199,9 +199,9 @@ Just need to change IOC container to use it for the Contact.Service.
 # Screen Shots
 ## Running Services
 ![Running Services](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/running%20services.png)
-## Playground
+## GraphQL Playground
 ![Playground](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/Playground.png)
-## Voyager
+## GraphQL Voyager
 ![Voyager](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/Voyager.png)
 ## Contact.Projection.API (Swagger)
 ![Contact.Projection.API](https://github.com/cbrown11/PlatformContactExample/blob/master/Screen%20Snapshots/swagger.png)
