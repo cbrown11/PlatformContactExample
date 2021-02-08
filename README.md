@@ -107,18 +107,21 @@ query {
 }
 ``` 
 
-# EventStore In Memory Verions (Greg Young)
+# EventStore In Memory Verions 
 
-I've used a in memory database both for my eventstore, projection. The bus is also using a development version and stored locally to disk - ..\Platform\.learningtransport.
+I've used an in memory database for both my eventstore and projection. 
 
+The bus is also using a development version and stored locally to disk - ..\Platform\.learningtransport.
 
-I have already writen packages that can replace these in memory infrastures. For example have written commercially  the eventstore, using Greg Young, SQL, MonogDB, and recently for Azure tables and eventHub.
+I have already writen packages that can replace these in memory infrastures. For example have written commercially using the EvenStore (Greg Young), SQL, MonogDB, and recently for Azure tables and eventHub.
 
+## EventStore (Greg Young)
 
-For example could replace the in memory version with Greg Young if you have it installed, then I'm sure my version could be used - https://github.com/cbrown11/DomainRepository.EventStore. 
+You could replace the in memory version with Greg Young Eventstore if you have it installed.  
+
+https://github.com/cbrown11/DomainRepository.EventStore. 
 
 Just need to change IOC container to use it for the Contact.Service.
-
 
         private static IContainer BuildContainer(IConfigurationRoot configuration) => new Container(x => {
             x.For<ITransientDomainEventPublisher>().Use<TransientDomainEventPublisher>();
