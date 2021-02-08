@@ -20,7 +20,7 @@ There are three services to run and the UI. All services are written in dotnet  
 So if you haven't got Visual studio can run 'dotnet run' in the project or 'dotnet <dll>' on a compiled version ('dotnet build').
   
 ## PlatformUI 
-The Code for the UI is in a different Git Repository `https://github.com/cbrown11/PlatformExampleUI`
+The Code for the UI is in a different Git Repository https://github.com/cbrown11/PlatformExampleUI
 
 Navigate to `http://localhost:4200/`
 
@@ -87,7 +87,7 @@ If another domain area needs a more complex version, for example need to have th
 
 This seperate domain should have its own contact model (or use a shared kernel value object if using DDD). And therefore have its own persitence of it.
 1. The data can either be passed or capture from the contact domain service, either from domain peristence or the read model. Depends on the latency but I'm sure the read model would be sufficient in this scenario and most cases.
-2. The domain would then keeps its own contact details up to date by subscribing to the contact domain events. (same was as the contact readmodel)
+2. The domain would then keep its own contact details up to date by subscribing to the contact domain events. (same was as the contact readmodel)
 3. In regards to the Platform Schema. Obviously it could have its own model type but I would think contact model type would be the same in most cases. Therefore for that new domain area model type in the GraphQL schema, the Contact Type resolver would only need to be different. And point to the relative new domain source. 
 
 # Playground Examples
