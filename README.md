@@ -15,6 +15,8 @@ An Architecture overview can be found here (grey means its not been implemented)
 
 https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf
 
+[PlatformExample.pdf](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf).
+
 # Platform Services and UI
 
 There are three services to run and the UI. All services are written in dotnet  version .net core 3.1. 
