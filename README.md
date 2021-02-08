@@ -1,28 +1,47 @@
+
+# Overview of achievment
+
 I kept everything in one solution but obvioulsy this would be seperated. If the Startup is passed over in VS, then hitting run will start all the required services. 
 
 Though please note everything in memory at the moment, so database persitence will be lost if the services are stopped.
-
-
-There are three services to run and the UI. 
-
-PlatformUI 
-- http://localhost:4200/
-1. Platform.GatewayAPI
-- http://localhost:3000/ui/playground
-- http://localhost:3000/ui/voyager (will give a living model of the schema)
-2. Contact.Service
-- Fire by message only
-3. Contact.Projection.API
-- http://localhost:58118/swagger/index.html
-
 
 Didnt managed to get the UI fully done but everything can be done by the gatewayAPI, which uses the GraphQL pattern. If you have used graphQL before it is introspection, so the playground wil have intellisense (hit ctrl+space for hint).
 
 https://graphql.org/learn/
 
+
+# Platform Services and UI
+
+There are three services to run and the UI. 
+
+## PlatformUI 
+The Code for the UI is in a different Git Repository `https://github.com/cbrown11/PlatformExampleUI`
+
+Navigate to `http://localhost:4200/`
+
+## Platform.GatewayAPI
+
+Main api is `http://localhost:3000/graphql`. Ive attached playground and voyager to the api so can easily view and explorer 
+
+- For Playground Ground Navigate to `http://localhost:3000/ui/playground`
+- For Voyager  Navigate to `http://localhost:3000/ui/voyager`
+
+## Contact.Service
+
+- Endpoint is only a Message. Though could expose the Command as an API call.
+- Events will be written to an eventstore and the domain repository will send this events on to the Bus
+
+## Contact.Projection.API
+
+Navigate to view sawagger of the API `http://localhost:58118/swagger/index.html`
+
+## Playground Examples
+
 To create a contact you will need to run the following mutation, which the create component would run in the UI. This is where the data validation is mainly done.
 
-1. Write a Contact. This will send a commnand message to the Contact.Service. 
+### Create a Contact Mutation
+
+To create  a Contact, then send a commnand message to the Contact.Service via this mutation: 
  
 mutation {
   createContact(
@@ -42,7 +61,9 @@ mutation {
   )
 }
 
-2. Some useful qraphql queries but can be view via the UI. Though I havent setup pub/sub which graphQL also has.
+### Query Platform
+
+Some useful qraphql queries but can be view via the UI. Though I havent setup pub/sub which graphQL also has.
 
 
 query{
@@ -85,6 +106,8 @@ query {
   }
 }
 
+
+## EventStore In Memory Verions (Greg Young)
 
 I've used a in memory database both for my eventstore, projection. The bus is also using a development version and stored locally to disk - ..\Platform\.learningtransport.
 
