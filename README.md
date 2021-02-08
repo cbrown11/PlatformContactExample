@@ -49,6 +49,11 @@ I have made country a static class which the Platform Schema uses.
 
 However this could be a simple API in its own right. And easily changed in the Platform.GatewayAPI, without effecting anything up stream or the other services.
 
+For example the rest service end point could be a simple Rest API.
+
+- http://localhost:{port}/country
+- http://localhost:{port}/country/{alphaCode}
+
 # Playground Examples
 
 To create a contact you will need to run the following mutation, which the create component would run in the UI. This is where the data validation is mainly done.
