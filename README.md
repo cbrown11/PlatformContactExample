@@ -89,10 +89,13 @@ If its simple and all they care about is having the latest version then then lin
 
 If another domain area needs a more complex version, for example need to have the latest contact up to a given time then this can be different (ie submitting legal document). Obviously we stored the events so we can still obtain that information from the contact service. Though dont believe this would be the right approach. What if we want to replace the contact service with another service? 
 
-This seperate domain should have its own contact model (or use a shared kernel value object if using DDD). And therefore have its own persitence of it.
+This seperate domain should have its own contact model (or use a shared kernel value object if using DDD) and therefore have its own persitence of it.
 1. The data can either be passed or capture from the contact domain service, either from domain peristence or the read model. Depends on the latency but I'm sure the read model would be sufficient in this scenario and most cases.
-2. The domain would then keep its own contact details up to date by subscribing to the contact domain events. (same was as the contact readmodel)
+2. The domain would then keep its own contact details up to date by subscribing to the contact domain events [ie ContactUpdated]. (same was as the contact readmodel)
 3. In regards to the Platform Schema. Obviously it could have its own model type but I would think contact model type would be the same in most cases. Therefore for that new domain area model type in the GraphQL schema, the Contact Type resolver would only need to be different. And point to the relative new domain source. 
+
+[see platform overview diagram for visual example (ie ContactUpdated event)](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf).
+
 
 # Playground Examples
 
