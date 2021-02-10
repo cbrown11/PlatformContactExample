@@ -5,7 +5,7 @@ I kept everything in one solution but obvioulsy this would be seperated. If the 
 
 Though please note everything in memory at the moment, so database persitence will be lost if the services are stopped.
 
-Didnt managed to get the UI fully done but everything can be done by the gatewayAPI, which uses the GraphQL pattern. Hopefully I've implemntated enough to determine what you are looking for and my current skill sets. 
+Didnt managed to get the UI fully done but everything can be done by the gatewayAPI, which uses the GraphQL pattern. Hopefully I've implemented enough to determine what you are looking for and my current skill sets. 
 
 If you haven't used graphQL before it is introspection, so the playground wil have intellisense (hit ctrl+space for a hint).
 
