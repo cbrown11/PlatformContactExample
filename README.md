@@ -94,7 +94,7 @@ This seperate domain should have its own contact model (or use a shared kernel v
 2. The domain would then keep its own contact details up to date by subscribing to the contact domain events [ie ContactUpdated]. (same was as the contact readmodel)
 3. In regards to the Platform Schema. Obviously it could have its own model type but I would think contact model type would be the same in most cases. Therefore for that new domain area model type in the GraphQL schema, the Contact Type resolver would only need to be different. And point to the relative new domain source. 
 
-[see platform overview diagram for visual example (ie ContactUpdated event)](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf).
+[see platform overview diagram](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf) for a visual example of it (ie ContactUpdated event).
 
 
 # Playground Examples
