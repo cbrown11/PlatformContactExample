@@ -4,7 +4,7 @@
 I kept everything in one solution but obvioulsy this would be seperated. If in Visual Studio and you setup the following in projects to startup, then runnning the solution will start all the required services and expose their endpoints. 
 
 - Platform.GatewayAPI
-- Contact.Projection
+- Contact.Service
 - Contact.Projection.API
 
 Please note everything in memory at the moment, so database persitence will be lost if the services are stopped.
