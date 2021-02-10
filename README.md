@@ -56,7 +56,7 @@ dotnet Contact.Service.dll
 - The service will subscribe and listen to the domain events thats its interested in
 - Using NserviceBus learning Transport so will automatically setup the pub/sub. But other transporters will need their setup to be configured. I have written them in the pass for MSMQ, SQL, RabbitMQ via a config file.
 
-Navigate to view sawagger of the API `http://localhost:58118/swagger/index.html`
+Navigate to view swagger of the API `http://localhost:58118/swagger/index.html`
 
 ``` 
 cd .\Contact.Projection.API\bin\Debug\netcoreapp3.1
