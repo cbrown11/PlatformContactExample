@@ -15,7 +15,7 @@ If you haven't used graphQL before it is introspection, so the playground wil ha
 
 Documentation on GraphQL: https://graphql.org/learn/
 
-[An architecture overview can be found here](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf) (grey means its not been implemented).
+**[An architecture overview can be found here](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf).**
 
 # Platform Services and UI
 
