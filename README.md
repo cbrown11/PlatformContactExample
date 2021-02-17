@@ -15,7 +15,7 @@ Please note everything in memory at the moment, so database persitence will be l
 
 UI is in a seperate GitHub repository ([click here](https://github.com/cbrown11/PlatformExampleUI)).
 
-If you haven't used graphQL before it is introspection, so the playground wil have intellisense (hit ctrl+space for a hint). Documentation on GraphQL can be found here: https://graphql.org/learn/
+If you haven't used graphQL before it is introspection, so the playground will have intellisense (hit ctrl+space for a hint). Documentation on GraphQL can be found here: https://graphql.org/learn/
 
 
 # Platform Services and UI
