@@ -3,6 +3,8 @@
 
 **[An architecture overview can be found here](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf).**
 
+The architeture used here is more of a Cloud-native architecture, especially a hosted version (ie kubernetes and docker). Though this easy to change to a more stateless hosted version (ie Azure Functions).
+
 I kept everything in one solution but obvioulsy this would be seperated. The primary endpoints and projects in this solution are: 
 
 - Platform.GatewayAPI
