@@ -1,25 +1,24 @@
 
 # Overview
 
-I kept everything in one solution but obvioulsy this would be seperated. If in Visual Studio and you setup the following in projects to startup, then runnning the solution will start all the required services and expose their endpoints. 
+**[An architecture overview can be found here](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf).**
+
+I kept everything in one solution but obvioulsy this would be seperated. The primary endpoints and projects in this solution are: 
 
 - Platform.GatewayAPI
 - Contact.Service
 - Contact.Projection.API
 
-Please note everything in memory at the moment, so database persitence will be lost if the services are stopped.
+Please note everything in memory at the moment, so database persitence will be lost if the services are stopped. Though the pattern used, allows infrastructure persitence can be injected in, whether thats on cloud or on premise persitence.
 
-Didnt managed to get the UI fully done but everything can be done by the gatewayAPI, which uses the GraphQL pattern. Hopefully I've implemented enough to determine what you are looking for and my current skill sets. UI is in a seperate GitHub repository (see below).
+UI is in a seperate GitHub repository ([click here](https://github.com/cbrown11/PlatformExampleUI)).
 
-If you haven't used graphQL before it is introspection, so the playground wil have intellisense (hit ctrl+space for a hint).
+If you haven't used graphQL before it is introspection, so the playground wil have intellisense (hit ctrl+space for a hint). Documentation on GraphQL can be found here: https://graphql.org/learn/
 
-Documentation on GraphQL: https://graphql.org/learn/
-
-**[An architecture overview can be found here](https://github.com/cbrown11/PlatformContactExample/blob/master/PlatformExample.pdf).**
 
 # Platform Services and UI
 
-There are three services to run and the UI. All services are written in dotnet  version .net core 3.1. 
+There are three services and a UI for this example to run. All services are written in dotnet  version .net core 3.1. 
 
 If you haven't got Visual studio, you can run 'dotnet run' in the project or 'dotnet <dll>' on a compiled version (after 'dotnet build').
   
