@@ -179,7 +179,7 @@ I've used an in memory database for both my eventstore and projection.
 
 The bus is also using a development version and stored locally to disk - ..\Platform\.learningtransport.
 
-I have already writen packages that can replace these in memory infrastures. For example I have  written cones using the EvenStore (Greg Young), SQL, MonogDB, and recently for Azure tables and Azure eventHub.
+I have already writen packages that can replace these in memory infrastures. For example using the Greg Young EvenStore, SQL, MonogDB, and recently for Azure tables and Azure eventHub.
 
 ## EventStore (Greg Young)
 
