@@ -2,8 +2,6 @@
 using NServiceBus;
 using StructureMap;
 
-//using IContainer = NServiceBus.ObjectBuilder.Common.IContainer;
-
 namespace CrossCutting.NServiceBus
 {
     public static class BusEndpointInstance
